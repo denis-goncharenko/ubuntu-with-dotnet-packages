@@ -1,0 +1,23 @@
+version: 2
+jobs:
+    cms-build:
+        machine: true
+        steps:
+            - checkout
+            - run:
+                name: Build docker image
+                command: docker build -t $IMAGE_NAME_UBUNTU:latest .
+            - run:
+                name: Push image to dokcerhub
+                command: |
+                            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+                            docker push $IMAGE_NAME_UBUNTU:latest
+workflows:
+    version: 2
+    cms-workflow:
+        jobs:
+        - cms-build:
+            context: DockerContext
+            filters:
+                branches:
+                    only: master
