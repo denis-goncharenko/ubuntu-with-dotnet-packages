@@ -9,6 +9,6 @@
   && dpkg --purge packages-microsoft-prod && dpkg -i packages-microsoft-prod.deb \
   && apt-get update \
   && apt-get install -y dotnet-sdk-2.2
- RUN apt-get install curl
+ RUN apt-get install -y curl
  RUN apt-get install -y nuget
  RUN apt-get install -y mono-devel
