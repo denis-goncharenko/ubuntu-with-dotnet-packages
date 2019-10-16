@@ -8,7 +8,8 @@
   && wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
   && dpkg --purge packages-microsoft-prod && dpkg -i packages-microsoft-prod.deb \
   && apt-get update \
-  && apt-get install -y dotnet-sdk-2.2
+  && apt-get install -y dotnet-sdk-2.2 \
+  && apt-get install npm -y
  RUN apt-get install -y curl
  RUN apt-get install -y nuget
  RUN apt-get install -y mono-devel
