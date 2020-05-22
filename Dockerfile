@@ -9,7 +9,7 @@
   && dpkg --purge packages-microsoft-prod && dpkg -i packages-microsoft-prod.deb \
   && apt-get update \
   && apt-get install -y dotnet-sdk-2.2 \
-  && apt-get install npm -y
+  && apt-get install npm -y \
   && apt-get install unzip
  RUN apt-get install -y curl
  RUN apt-get install -y nuget
