@@ -10,10 +10,7 @@
   && apt-get update \
   && apt-get install -y dotnet-sdk-2.2 \
   && apt-get install npm -y \
-  && apt-get install unzip \
-  && dotnet tool install -g dotnet-sonarscanner \
-  && export PATH="$PATH:/root/.dotnet/tools"
+  && apt-get install unzip
  RUN apt-get install -y curl
  RUN apt-get install -y nuget
  RUN apt-get install -y mono-devel
- RUN apt-get install -y openjdk-8-jdk
