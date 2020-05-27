@@ -11,7 +11,7 @@
   && apt-get install -y dotnet-sdk-2.2 \
   && apt-get install npm -y \
   && apt-get install unzip \
-  && dotnet tool install -g dotnet-sonarscanner
+  && dotnet tool install -g dotnet-sonarscanner \
   && export PATH="$PATH:/root/.dotnet/tools"
  RUN apt-get install -y curl
  RUN apt-get install -y nuget
