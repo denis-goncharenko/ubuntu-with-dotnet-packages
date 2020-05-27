@@ -15,3 +15,4 @@
  RUN apt-get install -y nuget
  RUN apt-get install -y mono-devel
  RUN dotnet tool install --global dotnet-sonarscanner
+ RUN apt-get install -y openjdk-8-jdk
