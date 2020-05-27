@@ -14,3 +14,4 @@
  RUN apt-get install -y curl
  RUN apt-get install -y nuget
  RUN apt-get install -y mono-devel
+ RUN dotnet tool install --global dotnet-sonarscanner
